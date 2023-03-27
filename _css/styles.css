@@ -1,0 +1,210 @@
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+
+body{
+	background-color: #pink;
+}
+header{
+	background-color: #878787;
+	font-family: 'Roboto', sans-serif;
+	border-bottom:solid 5px;
+  	border-color :#4F5D75;
+}
+nav{
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Roboto bold', sans-serif;
+}
+nav a{
+	color: orange;
+	text-decoration: none;
+	background-color: none;
+	width: 300px;
+	margin: 10px 25px;
+	padding: 10px 0px;
+	display: inline-block;
+	-webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+nav a:hover{
+	background-color: #eeeeee;
+	font-size: 30px;
+	border-bottom:solid 5px;
+	margin-top:20px;
+	
+}
+nav a:current {
+	background-color: pink;
+}
+
+.cont{
+	max-width: 1360px;
+	background-color: #ffffff;
+	margin: 0px auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.col{
+	background-color: #ffffff;
+	padding: 10px 1%;
+	margin: 10px 1%;
+	flex-grow: 1;
+}
+.onefourth{
+	flex-grow: 0;
+	width: 21%;
+}
+.half{
+	flex-grow: 0;
+	width: 46%;
+}
+.threefourth{
+	flex-grow: 0;
+	width: 71%;
+}
+.full{
+	flex-grow: 0;
+	width: 96%;
+}
+
+.imgSizer{
+	width: 100%;
+	height: auto;
+}
+
+.bruh{
+	font-size: 40px;
+	color: #3D348B;
+	text-align: center;
+}
+
+.vid{
+  
+  justify-content: center;
+
+}
+.center{
+	justify-content: center;
+}
+.mid{
+  background-color: #cccccc;
+  border-bottom:solid 5px;
+  border-color :#4F5D75;
+
+}
+.vid {
+	align-items: center;
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.grey{
+background-color:#eeeeee;
+border-bottom:solid 5px;
+  border-color :#4F5D75;
+}
+#faded .slides {
+				border:solid 15px #5a1509;
+				width: 600px;
+				height: 300px;
+
+				position:relative;
+
+				margin-left:auto;
+				margin-right:auto;
+			}
+			/*The images inside your slideshow styling*/
+			#faded img {
+				position:absolute;
+				left: 0px;
+				top: 0px;
+			}
+
+.plain{
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color:#3D348B;
+
+}
+
+h1{
+text-align: center;
+font-size: 60px;
+color: #3D348B;
+font-family: 'Roboto', sans-serif;
+
+}
+h2 {
+	font-size: 50px;
+	color: #3D348B;
+	font-family: 'Roboto', sans-serif;
+}
+h3 {
+	font-size: 30px;
+	color: #2D3142;
+	font-family: 'Roboto', sans-serif;
+}
+h4{
+	font size:20px;
+	font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: #3D348B;
+ 
+
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+	
+	.tabFull{
+		flex-grow: 0;
+		width: 96%;
+	}
+	.tabhalf{
+		flex-grow: 0;
+		width: 46%
+	}
+	.tabfourth{
+		flex-grow: 0;
+		width: 21%
+	}
+	
+
+@media only screen and (max-width: 520px){
+	
+.phoneFull{
+	flex-grow: 0;
+		width: 96%;
+	}
+
+	
+.container{
+	
+	background-color: #C6EC24;
+}
+}

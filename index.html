@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" >
+	<link rel='icon' href='_images/fav.png' type='image/x-icon'/>
+	<title> Hammond Productions  </title>
+	<link rel="stylesheet" type="text/css" href="_css/styles.css">
+	<link rel="icon" type="image/x-icon" href="_images/bruh.png" />
+	<style type="text/css">
+			
+			#faded .slides {
+				border:solid 5px #3D348B;
+				width: 900px;
+				height: 400px;
+
+				position:relative;
+
+				margin-left:auto;
+				margin-right:auto;
+			}
+			#faded img {
+				position:absolute;
+				left: 0px;
+				top: 0px;
+			}
+		</style>
+</head>
+<body>
+	<div class="cont">
+		<header class="row" class=full>
+			<div class="col">
+				<h1> Hammond Productions  </h1>
+			</div>
+		</header>
+		
+		<nav class="row">
+			<div class="col onefourth tabhalf phoneFull">
+				<a class="bruh"   href="index.html">Home</a>
+			</div>
+			<div class="col onefourth tabhalf phoneFull">
+				<a class=bruh href="drones.html">Drones</a>
+			</div>
+			<div class="col onefourth tabhalf phoneFull">
+				<a class=bruh href="about.html">About</a>
+			</div>
+			<div class="col onefourth tabhalf phoneFull">
+				<a class=bruh href="work.html">Work</a>
+			</div>
+		</nav>
+		
+		<div class="row">
+			<div id=video class="col full tabhalf phoneFull mid ">
+				<h1> 2021 Reel </h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div  class="col full tabhalf phoneFull video-container">
+				<iframe src="https://player.vimeo.com/video/525827788" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>	
+		
+		<div>	
+			<div class="row">
+			<div id=video class="col full tabhalf phoneFull mid">
+				<h1> Contact us </h1>
+
+			</div>
+			</div>
+		</div>
+			
+			
+			<div class="row ">
+				<div id=video class="col full tabfull phoneFull mid">
+				<?php
+				//if "email" variable is filled out, send email
+				  if (isset($_REQUEST['email']))  {
+
+				  //Email information
+				  $admin_email = "someone@example.com";
+				  $email = $_REQUEST['email'];
+				  $subject = $_REQUEST['subject'];
+				  $comment = $_REQUEST['comment'];
+
+				  //send email
+				  mail($admin_email, "$subject", $comment, "From:" . $email);
+
+				  //Email response
+				  echo "Thank you for contacting us!";
+				  }
+
+				  //if "email" variable is not filled out, display the form
+				  else  {
+				?>
+
+				 <form method="post">
+				  Email: <input name="email" type="text" /><br />
+				  Subject: <input name="subject" type="text" /><br />
+				  Message:<br />
+				  <textarea name="comment" rows="15" cols="40"></textarea><br />
+				  <input type="submit" value="Submit" />
+				  </form>
+
+				<?php
+				  }
+				?>
+
+				</div>
+			</div>
+		
+		<section id="faded">
+					<div class="slides">
+						
+						<img src="_images/one.png" height="400" width="900" />
+						<img src="_images/two.png" height="400" width="900" />
+						<img src="_images/three.png" height="400" width="900" />
+						<img src="_images/four.png" height="400" width="900" />
+						<img src="_images/five.png" height="400" width="900" />
+					</div>
+				</section>
+
+
+
+			<footer>
+            <div class="cont">
+                <div class="row ">
+                    <div class="col half tabhalf phoneFull">
+                        <h3 class="grey">See more</h3>
+                        <ul>
+                            <li><a href="index.html"><h4> Home </h4> </a></li>
+                            <li><a href="drones.html"><h4> Drones </h4> </a></li>
+                            <li><a href="about.html"> <h4> About </h4></a></li>
+                            <li><a href="work.html"> <h4> Work </h4></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col half tabhalf phoneFull">
+                        <h3 class="grey">Socials</h3>
+                        <ul>
+                         <li><a href="https://www.instagram.com/sycamore.fpv/?hl=en"target="_blank" ><h4> Instagram </h4> </a></li>
+                         <li><a href="https://www.youtube.com/channel/UC47_DOKLXx_bCX91tjsZnBw" target="_blank"><h4> Youtube </h4> </a></li>  
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="copyright">Hammond Productions 2021</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+		</section>
+		<script type="text/javascript" src="_js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function () {
+				console.log('set');
+				setTimeout(slide_fade,1500);
+			});
+			
+			function slide_fade() {
+				console.log('fading');
+				var theLastSlide = $('#faded img:last');
+				theLastSlide.animate({'opacity':'0'}, 1500, slide_shuffle);
+				function slide_shuffle() {
+					theLastSlide.prependTo('#faded .slides');
+					theLastSlide.css({'opacity':'1'});
+					setTimeout(slide_fade,2750);
+				}
+
+			}
+		</script>
+</body>
+</html>
